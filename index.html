@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container my-5 text-center">
+      <div class="shadowCss m-auto w-75 p-5">
+        <h1>Smart Login System</h1>
+        <input
+          type="text"
+          placeholder="Enter your Name"
+          oninput="validateForm(this)"
+          id="signInName"
+          class="form-control my-3 bg-transparent text-white-50 shadow-none"
+        />
+        <div class="alert alert-danger d-none">
+          Name must be 3-15 characters (letters, numbers, _ or -)
+        </div>
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          oninput="validateForm(this)"
+          id="signInEmail"
+          class="form-control my-3 bg-transparent text-white-50 shadow-none"
+        />
+        <div class="alert alert-danger d-none">Enter a valid email address</div>
+
+        <input
+          type="password"
+          placeholder="Enter your Password"
+          oninput="validateForm(this)"
+          id="signInPassword"
+          class="form-control my-3 bg-transparent text-white-50 shadow-none"
+        />
+        <div class="alert alert-danger d-none">
+          Password must be at least 8 characters, include uppercase, lowercase,
+          number, and symbol
+        </div>
+
+        <div id="req" class="mb-1 text-danger text-center"></div>
+        <button
+          onclick="signIn()"
+          id="btn"
+          class="btn btn-outline-info w-100 my-3"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
